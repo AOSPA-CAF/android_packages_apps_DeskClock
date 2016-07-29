@@ -83,6 +83,12 @@ public final class ClockContract {
          * <p>Type: STRING</p>
          */
         public static final String RINGTONE = "ringtone";
+
+        /**
+         * True if alarm should start off quiet and slowly increase volume
+         * <P>Type: BOOLEAN</P>
+         */
+        public static final String INCREASING_VOLUME = "incvol";
     }
 
     /**
@@ -135,6 +141,11 @@ public final class ClockContract {
          * The content:// style URL for this table.
          */
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/instances");
+
+        /**
+         * Alarm state for rtc power off alarm
+         */
+        public static final int POWER_OFF_ALARM_STATE = -1;
 
         /**
          * Alarm state when to show no notification.
